@@ -43,6 +43,18 @@ img {
     max-width: 100%;
 }
 
+button {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    overflow: visible;
+    text-transform: none;
+    /* -webkit-appearance: button; */
+    
+    cursor: pointer;
+}
+
 .container {
     background: var(--rose-50);
     padding: var(--spacing-300);
@@ -101,6 +113,12 @@ img {
                                 font-weight: 600;
                             }
                         }
+                        #add-to-cart-btn:hover {
+                            border: 1px solid var(--red);
+                        }
+                        #add-to-cart-btn:hover p {
+                            color: var(--red);
+                        }
                         /*-------- Active Button --------*/
                         .active-btn-wrapper {
                             background: var(--red);
@@ -117,6 +135,12 @@ img {
                                 width: 1.25rem;
                                 border-radius: 50%;
                                 border: 1px solid var(--white);
+                            }
+                            #btn-plus:hover, #btn-minus:hover {
+                                background: #fff;
+                            }
+                            #btn-plus:hover svg path, #btn-minus:hover svg path {
+                                fill: var(--red);
                             }
                             div {
                                 color: var(--white);
@@ -248,6 +272,12 @@ img {
                         border: 1px solid var(--rose-400);
                         border-radius: 50%;
                     }
+                    button:hover {
+                        border: 1px solid var(--rose-900);
+                    }
+                    button:hover svg path {
+                        fill: var(--rose-900);
+                    }
                 }
             }
 
@@ -287,7 +317,7 @@ img {
                     }
                 }
             }
-            #confirm-order {
+            #confirm-order-btn {
                 color: var(--white);
                 background: var(--red);
                 font-size: 1rem;
@@ -295,6 +325,11 @@ img {
                 padding: var(--spacing-200) var(--spacing-300);
                 border: none;
                 border-radius: 62.4375rem;
+                transition: transform .3s ease-in-out;
+            }
+            #confirm-order-btn:hover {
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), var(--color-red, #C73B0F);
+                transform: translateY(5px);
             }
         }
     }
