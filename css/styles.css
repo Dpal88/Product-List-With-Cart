@@ -70,30 +70,15 @@ img {
                     img {
                         border-radius: var(--spacing-100);
                     }
+
+                    /* Add to cart / Active Buttons Start */
                     .item-btn {
                         width: 10rem;
                         height: 2.75rem;
                         position: relative;
                         bottom: 1.5rem;
 
-                        /* .btn-wrapper {
-                            display: flex;
-                            align-items: center;
-                            width: 100%;
-                            height: 100%;
-                            border-radius: 62.4375rem;
-                            position: absolute;
-                            background: var(--red);
-                            justify-content: space-around;
-                            border: none;
-
-                            div {
-                                color: var(--white);
-                                font-size: 0.875rem;
-                                font-weight: 600;
-                            } */
-                        }
-                        button {
+                        #add-to-cart-btn, .active-btn-wrapper {
                             display: flex;
                             align-items: center;
                             width: 100%;
@@ -101,7 +86,7 @@ img {
                             border-radius: 62.4375rem;
                             position: absolute;
                         }
-                        button:first-child {
+                        #add-to-cart-btn {
                             background: var(--white);
                             justify-content: center;
                             border: 1px solid var(--rose-400);
@@ -115,18 +100,29 @@ img {
                                 font-weight: 600;
                             }
                         }
-                        button:last-child {
+                        .active-btn-wrapper {
                             background: var(--red);
                             justify-content: space-around;
-                            border: none;
+                            
+                            display: none;
 
-                            /* display: none; */
+                            #btn-plus, #btn-minus {
+                                background: none;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                height: 1.25rem;
+                                width: 1.25rem;
+                                border-radius: 50%;
+                                border: 1px solid var(--white);
+                            }
                             div {
                                 color: var(--white);
                                 font-size: 0.875rem;
                                 font-weight: 600;
                             }
                         }
+                        /* Add to cart / Active Buttons End */
                     }
                 }
                 .card-info {
