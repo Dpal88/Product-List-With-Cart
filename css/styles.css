@@ -71,7 +71,7 @@ img {
                         border-radius: var(--spacing-100);
                     }
 
-                    /* Add to cart / Active Buttons Start */
+                    /*-------- Add to cart / Active Buttons Start --------*/
                     .item-btn {
                         width: 10rem;
                         height: 2.75rem;
@@ -86,6 +86,7 @@ img {
                             border-radius: 62.4375rem;
                             position: absolute;
                         }
+                        /*-------- Add to cart Button --------*/
                         #add-to-cart-btn {
                             background: var(--white);
                             justify-content: center;
@@ -100,10 +101,11 @@ img {
                                 font-weight: 600;
                             }
                         }
+                        /*-------- Active Button --------*/
                         .active-btn-wrapper {
                             background: var(--red);
                             justify-content: space-around;
-                            
+
                             display: none;
 
                             #btn-plus, #btn-minus {
@@ -122,7 +124,7 @@ img {
                                 font-weight: 600;
                             }
                         }
-                        /* Add to cart / Active Buttons End */
+                        /*-------- Add to cart / Active Buttons End --------*/
                     }
                 }
                 .card-info {
@@ -153,6 +155,7 @@ img {
     .cart-wrapper {
         margin-top: var(--spacing-400);
 
+        /*-------- Empty Cart --------*/
         .empty-cart {
             background: var(--white);
             display: flex;
@@ -183,6 +186,8 @@ img {
                 }
             }
         }
+
+        /*-------- Active Cart --------*/
         .active-cart {
             background: var(--white);
             display: flex;
@@ -190,11 +195,14 @@ img {
             gap: var(--spacing-300);
             padding: var(--spacing-300);
 
+            display: none;
+
             h2 {
                 color: var(--red);
                 font-size: 1.5rem;
                 font-weight: 700;
             }
+            /*-------- Users Items --------*/
             .added-items {
                 display: flex;
                 flex-direction: column;
@@ -217,19 +225,19 @@ img {
                             gap: var(--spacing-100);
                             margin-top: var(--spacing-100);
 
+                            span {
+                                font-size: 0.875rem;
+                            }
                             span:nth-child(1) {
                                 color: var(--red);
-                                font-size: 0.875rem;
                                 font-weight: 600;
                             }
                             span:nth-child(2) {
                                 color: var(--rose-500);
-                                font-size: 0.875rem;
                                 font-weight: 400;
                             }
                             span:nth-child(3) {
                                 color: var(--rose-500);
-                                font-size: 0.875rem;
                                 font-weight: 600;
                             }
                         }
@@ -242,6 +250,8 @@ img {
                     }
                 }
             }
+
+            /*-------- Users Total --------*/
             .order-total {
                 display: flex;
                 align-items: center;
@@ -273,7 +283,6 @@ img {
                     font-weight: 400;
 
                     span {
-                        color: var(--rose-900);
                         font-weight: 600;
                     }
                 }
@@ -286,6 +295,52 @@ img {
                 padding: var(--spacing-200) var(--spacing-300);
                 border: none;
                 border-radius: 62.4375rem;
+            }
+        }
+    }
+}
+
+
+/* ------------- Media Queries ------------- */
+
+/* 768px = 48rem */
+@media (width >= 48rem) {
+    
+    section {
+        background: var(--rose-50);
+        display: flex;
+        justify-content: center;
+
+        .container {
+            padding: var(--spacing-500);
+    
+            .desserts-wrapper {
+
+                .cards-wrapper {
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: var(--spacing-400) var(--spacing-300);
+                    /* max-width: 50rem; */
+                }
+            }
+        }
+    }
+
+}
+
+/* 1280px = 80rem */
+@media (width >= 80rem) {
+    section {
+        /* padding: var(--spacing-1100) var(--spacing-500); */
+
+        .container {
+            display: grid;
+            grid-template-columns: 50rem 24rem;
+            justify-content: center;
+            gap: var(--spacing-400);
+            max-width: 76rem;
+
+            .cart-wrapper {
+                margin: 0;
             }
         }
     }
